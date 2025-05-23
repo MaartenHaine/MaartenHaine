@@ -52,11 +52,11 @@
   <main class="container mx-auto px-4 py-8 max-w-4xl relative z-10">
     <About />
     <Education />
-    <Skills />
     <Experience />
     <Extracurricular />
     <Projects />
     <Hackathons />
+    <Skills />
   </main>
 
   <Footer />

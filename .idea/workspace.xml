@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b367103-ed9d-4027-b9be-eb970d75d29e" name="Changes" comment="fixed no scroll on mobile with navbar">
+    <list default="true" id="1b367103-ed9d-4027-b9be-eb970d75d29e" name="Changes" comment="Added extra animations on hovering containers, removed glitch effect for clarity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/App.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/About.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/About.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Education.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Education.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Experience.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Experience.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Extracurricular.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Extracurricular.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hackathons.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hackathons.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Projects.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Projects.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/index-DUq_IVZu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +85,8 @@
       <workItem from="1747968278900" duration="788000" />
       <workItem from="1747997475471" duration="2986000" />
       <workItem from="1748002558257" duration="120000" />
-      <workItem from="1748021890549" duration="2871000" />
+      <workItem from="1748021890549" duration="3753000" />
+      <workItem from="1748028801852" duration="1566000" />
     </task>
     <task id="LOCAL-00001" summary="add wave animation">
       <option name="closed" value="true" />
@@ -163,7 +160,23 @@
       <option name="project" value="LOCAL" />
       <updated>1748022567060</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added extra animations on hovering containers, removed glitch effect for clarity">
+      <option name="closed" value="true" />
+      <created>1748024924139</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748024924139</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added extra animations on hovering containers, removed glitch effect for clarity">
+      <option name="closed" value="true" />
+      <created>1748025034618</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1748025034618</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +190,7 @@
     <MESSAGE value="added darkmode" />
     <MESSAGE value="fixed mobile bug transparent when opened" />
     <MESSAGE value="fixed no scroll on mobile with navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed no scroll on mobile with navbar" />
+    <MESSAGE value="Added extra animations on hovering containers, removed glitch effect for clarity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added extra animations on hovering containers, removed glitch effect for clarity" />
   </component>
 </project>

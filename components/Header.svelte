@@ -8,11 +8,11 @@
   const navItems = [
     { id: 'about', label: 'About' },
     { id: 'education', label: 'Education' },
-    { id: 'skills', label: 'Skills' },
     { id: 'experience', label: 'Experience' },
     { id: 'extracurricular', label: 'Extracurricular' },
     { id: 'projects', label: 'Projects' },
-    { id: 'hackathons', label: 'Hackathons' }
+    { id: 'hackathons', label: 'Hackathons' },
+    { id: 'skills', label: 'Skills' }
   ];
 
   let isMenuOpen = false;
