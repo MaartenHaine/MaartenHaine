@@ -86,22 +86,22 @@
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     {#each hackathons as hackathon}
-      <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg h-full flex flex-col">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg h-full flex flex-col border dark:border-gray-700">
         <div class="mb-4">
           <div class="flex justify-between items-start">
-            <h3 class="text-lg font-semibold text-gray-800">
+            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
               {#if hackathon.placement}
-                <span class="text-blue-600 font-bold">{hackathon.placement} — </span>
+                <span class="text-blue-600 dark:text-blue-400 font-bold">{hackathon.placement} — </span>
               {/if}
-              <a href={hackathon.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300">
+              <a href={hackathon.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
                 {hackathon.name}
               </a>
             </h3>
-            <span class="text-sm text-gray-600">{hackathon.date}</span>
+            <span class="text-sm text-gray-600 dark:text-gray-300">{hackathon.date}</span>
           </div>
         </div>
 
-        <ul class="list-disc list-inside mb-4 text-gray-700 space-y-2 flex-grow">
+        <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300 space-y-2 flex-grow">
           {#each hackathon.description as item}
             <li>{item}</li>
           {/each}

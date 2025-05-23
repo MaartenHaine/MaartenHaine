@@ -1,5 +1,6 @@
-<script lang="ts">
+<script>
   import { onMount } from 'svelte';
+  import ThemeToggle from './ThemeToggle.svelte';
 
   export let activeSection;
 
@@ -24,8 +25,7 @@
   function scrollToSection(id) {
     const element = document.getElementById(id);
     if (element) {
-      // Use a smoother scroll with offset to prevent header overlap
-      const headerHeight = 80; // Approximate header height
+      const headerHeight = 80;
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - headerHeight;
 
@@ -49,27 +49,31 @@
   });
 </script>
 
-<header class={`fixed top-0 left-0 w-full z-50 transition-all duration-500 py-4 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+<header class={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'}`}>
   <div class="container mx-auto px-4 max-w-4xl">
     <div class="flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-gray-800 glitch-effect cursor-pointer">
-        <span class="font-mono">&lt;</span>Maarten<span class="text-blue-600">/</span><span class="font-mono">&gt;</span>
+      <h1 class="text-2xl font-bold text-gray-800 dark:text-white glitch-effect cursor-pointer">
+        <span class="font-mono">&lt;</span>Maarten<span class="text-blue-600 dark:text-blue-400">/</span><span class="font-mono">&gt;</span>
       </h1>
 
-      <!-- Mobile menu button -->
-      <button
-              class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none transition-all duration-300 transform hover:scale-110"
-              on:click={toggleMenu}
-              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transition-transform duration-300 {isMenuOpen ? 'rotate-90' : ''}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          {#if isMenuOpen}
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          {:else}
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          {/if}
-        </svg>
-      </button>
+      <div class="flex items-center space-x-4">
+        <ThemeToggle />
+
+        <!-- Mobile menu button -->
+        <button
+                class="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none transition-all duration-300 transform hover:scale-110"
+                on:click={toggleMenu}
+                aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transition-transform duration-300 {isMenuOpen ? 'rotate-90' : ''}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            {#if isMenuOpen}
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            {:else}
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            {/if}
+          </svg>
+        </button>
+      </div>
 
       <!-- Desktop navigation -->
       <nav class="hidden md:block">
@@ -77,14 +81,11 @@
           {#each navItems as item, index}
             <li>
               <button
-                      class={`text-sm font-medium transition-all duration-300 relative overflow-hidden px-3 py-1 rounded-md ${activeSection === item.id ? 'text-blue-600 bg-blue-50' : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'}`}
+                      class={`text-sm font-medium transition-all duration-300 relative overflow-hidden px-3 py-1 rounded-md ${activeSection === item.id ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30' : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800'}`}
                       on:click={() => scrollToSection(item.id)}
                       style="animation-delay: {index * 0.1}s;"
               >
                 <span class="relative z-10">{item.label}</span>
-                {#if activeSection === item.id}
-                  <span class="absolute inset-0 bg-blue-100 transform scale-x-0 origin-left transition-transform duration-300 animate-pulse"></span>
-                {/if}
               </button>
             </li>
           {/each}
@@ -99,8 +100,8 @@
           {#each navItems as item, index}
             <li>
               <button
-                      class={`block w-full text-left px-4 py-2 rounded-md transition-all duration-300 transform hover:scale-105 ${activeSection === item.id ? 'bg-blue-50 text-blue-600' : 'text-gray-600 hover:bg-gray-100'}`}
-                      on:click={() => scrollToSection(item.id)}
+                      class={`block w-full text-left px-4 py-2 rounded-md transition-all duration-300 transform hover:scale-105 ${activeSection === item.id ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'}`}
+                      onclick={() => scrollToSection(item.id)}
                       style="animation-delay: {index * 0.05}s;"
               >
                 {item.label}

@@ -3,7 +3,7 @@
   import SectionTitle from './SectionTitle.svelte';
   import Tag from './Tag.svelte';
 
-  let sectionRef = '';
+  let sectionRef;
 
   const projects = [
     {
@@ -129,24 +129,24 @@
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     {#each projects as project, index}
-      <div class="bg-white p-6 rounded-lg shadow-md card-hover h-full flex flex-col relative z-10 fade-in-up" style="animation-delay: {index * 0.1}s;">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover h-full flex flex-col relative z-10 fade-in-up border dark:border-gray-700" style="animation-delay: {index * 0.1}s;">
         <div class="mb-4">
           <div class="flex justify-between items-start">
-            <h3 class="text-lg font-semibold text-gray-800 glitch-effect">
+            <h3 class="text-lg font-semibold text-gray-800 dark:text-white glitch-effect">
               {#if project.url}
-                <a href={project.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300">
+                <a href={project.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
                   {project.name}
                 </a>
               {:else}
                 {project.name}
               {/if}
             </h3>
-            <span class="text-sm text-gray-600 font-mono bg-gray-100 px-2 py-1 rounded">{project.year}</span>
+            <span class="text-sm text-gray-600 dark:text-gray-300 font-mono bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">{project.year}</span>
           </div>
-          <p class="text-gray-600 text-sm">{project.organization}</p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">{project.organization}</p>
         </div>
 
-        <ul class="list-disc list-inside mb-4 text-gray-700 space-y-2 flex-grow">
+        <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300 space-y-2 flex-grow">
           {#each project.description as item}
             <li>{item}</li>
           {/each}

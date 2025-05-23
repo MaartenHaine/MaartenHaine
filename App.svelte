@@ -45,7 +45,7 @@
 
 <svelte:window onscroll={handleScroll} />
 
-<div class="min-h-screen relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+<div class="min-h-screen relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
   <ParticleBackground />
   <Header {activeSection} />
 
@@ -85,8 +85,6 @@
     padding: 0.25rem 0.75rem;
     margin: 0.25rem;
     border-radius: 9999px;
-    background-color: #e5e7eb;
-    color: #374151;
     font-size: 0.875rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -114,14 +112,13 @@
     box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.15);
   }
 
-  /* Soft skills - Blue theme */
+  /* Light mode tag colors */
   :global(.tag.language),
   :global(.tag.soft-skill) {
     background: linear-gradient(135deg, #dbeafe, #bfdbfe);
     color: #1e40af;
   }
 
-  /* Programming - Yellow theme */
   :global(.tag.programming),
   :global(.tag.tool),
   :global(.tag.database),
@@ -130,20 +127,17 @@
     color: #92400e;
   }
 
-  /* Cybersecurity - Red theme */
   :global(.tag.security),
   :global(.tag.ctf) {
     background: linear-gradient(135deg, #fee2e2, #fecaca);
     color: #991b1b;
   }
 
-  /* Hardware - Purple theme */
   :global(.tag.hardware) {
     background: linear-gradient(135deg, #ede9fe, #ddd6fe);
     color: #5b21b6;
   }
 
-  /* Competition tags */
   :global(.tag.hackathon) {
     background: linear-gradient(135deg, #d1fae5, #a7f3d0);
     color: #065f46;
@@ -154,6 +148,42 @@
     color: #9a3412;
   }
 
+  /* Dark mode tag colors */
+  :global(.dark .tag.language),
+  :global(.dark .tag.soft-skill) {
+    background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
+    color: #93c5fd;
+  }
+
+  :global(.dark .tag.programming),
+  :global(.dark .tag.tool),
+  :global(.dark .tag.database),
+  :global(.dark .tag.devops) {
+    background: linear-gradient(135deg, #92400e, #b45309);
+    color: #fde68a;
+  }
+
+  :global(.dark .tag.security),
+  :global(.dark .tag.ctf) {
+    background: linear-gradient(135deg, #7f1d1d, #991b1b);
+    color: #fecaca;
+  }
+
+  :global(.dark .tag.hardware) {
+    background: linear-gradient(135deg, #4c1d95, #5b21b6);
+    color: #ddd6fe;
+  }
+
+  :global(.dark .tag.hackathon) {
+    background: linear-gradient(135deg, #064e3b, #065f46);
+    color: #a7f3d0;
+  }
+
+  :global(.dark .tag.coding-challenge) {
+    background: linear-gradient(135deg, #7c2d12, #9a3412);
+    color: #fed7aa;
+  }
+
   :global(.glitch-effect) {
     position: relative;
     display: inline-block;
@@ -161,24 +191,6 @@
 
   :global(.glitch-effect:hover) {
     animation: glitch 0.3s;
-  }
-
-  :global(.code-reveal) {
-    overflow: hidden;
-    border-right: 2px solid #3b82f6;
-    white-space: nowrap;
-    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
-  }
-
-  :global(.matrix-bg) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.1;
   }
 
   :global(.card-hover) {
@@ -206,6 +218,10 @@
   :global(.card-hover:hover) {
     transform: translateY(-5px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  :global(.dark .card-hover:hover) {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
   }
 
   :global(.terminal-text) {
@@ -242,24 +258,6 @@
     }
     80% {
       transform: translate(2px, -2px);
-    }
-  }
-
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-
-  @keyframes blink-caret {
-    from, to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: #3b82f6;
     }
   }
 

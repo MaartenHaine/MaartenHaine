@@ -34,7 +34,7 @@
       ],
       skills: [
         { name: "Python", type: "programming" },
-        { name: "Team Leadership", type: "soft-skill" },
+        { name: "Leadership", type: "soft-skill" },
         { name: "Technical Support", type: "soft-skill" }
       ]
     },
@@ -48,8 +48,7 @@
         "Managed, planned and coordinated logistics support operations to accomplish projects."
       ],
       skills: [
-        { name: "Logistics Management", type: "soft-skill" },
-        { name: "Event Planning", type: "soft-skill" }
+        { name: "Logistics Management", type: "soft-skill" }
       ]
     }
   ];
@@ -77,25 +76,25 @@
 
   <div class="space-y-6">
     {#each activities as activity}
-      <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg border dark:border-gray-700">
         <div class="flex justify-between items-start mb-4">
           <div>
-            <h3 class="text-lg font-semibold text-gray-800">
+            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
               {activity.position}
             </h3>
-            <p class="text-gray-600">{activity.location}</p>
+            <p class="text-gray-600 dark:text-gray-300">{activity.location}</p>
           </div>
           <div class="text-right">
-            <p class="font-medium text-gray-800 italic">
-              <a href={activity.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300">
+            <p class="font-medium text-gray-800 dark:text-white italic">
+              <a href={activity.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
                 {activity.organization}
               </a>
             </p>
-            <p class="text-sm text-gray-600">{activity.period}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{activity.period}</p>
           </div>
         </div>
 
-        <ul class="list-disc list-inside mb-4 text-gray-700 space-y-2">
+        <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300 space-y-2">
           {#each activity.responsibilities as responsibility}
             <li>{responsibility}</li>
           {/each}

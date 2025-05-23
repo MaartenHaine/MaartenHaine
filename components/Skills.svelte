@@ -96,11 +96,11 @@
 <section id="skills" bind:this={sectionRef}>
   <SectionTitle title="Skills" />
 
-  <div class="bg-white p-6 rounded-lg shadow-md card-hover relative z-10">
+  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover relative z-10 border dark:border-gray-700">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {#each skillCategories as category, categoryIndex}
         <div class="fade-in-up" style="animation-delay: {categoryIndex * 0.1}s;">
-          <h3 class="text-lg font-semibold text-gray-800 mb-3 glitch-effect">{category.title}</h3>
+          <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-3 glitch-effect">{category.title}</h3>
           <div class="flex flex-wrap">
             {#each category.skills as skill}
               <Tag

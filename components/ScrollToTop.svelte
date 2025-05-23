@@ -25,7 +25,7 @@
 {#if isVisible}
   <button
           class="fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none z-50 animate-bounce"
-          onclick={scrollToTop}
+          on:click={scrollToTop}
           aria-label="Scroll to top"
   >
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

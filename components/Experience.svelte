@@ -67,25 +67,25 @@
 
   <div class="space-y-6">
     {#each experiences as experience, index}
-      <div class="bg-white p-6 rounded-lg shadow-md card-hover relative z-10 fade-in-up" style="animation-delay: {index * 0.2}s;">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover relative z-10 fade-in-up border dark:border-gray-700" style="animation-delay: {index * 0.2}s;">
         <div class="flex justify-between items-start mb-4">
           <div>
-            <h3 class="text-lg font-semibold text-gray-800 glitch-effect">
+            <h3 class="text-lg font-semibold text-gray-800 dark:text-white glitch-effect">
               {experience.position}
             </h3>
-            <p class="text-gray-600">{experience.location}</p>
+            <p class="text-gray-600 dark:text-gray-300">{experience.location}</p>
           </div>
           <div class="text-right">
-            <p class="font-medium text-gray-800 italic">
-              <a href={experience.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300">
+            <p class="font-medium text-gray-800 dark:text-white italic">
+              <a href={experience.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
                 {experience.company}
               </a>
             </p>
-            <p class="text-sm text-gray-600">{experience.period}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{experience.period}</p>
           </div>
         </div>
 
-        <ul class="list-disc list-inside mb-4 text-gray-700 space-y-2">
+        <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300 space-y-2">
           {#each experience.responsibilities as responsibility}
             <li class="fade-in-up" style="animation-delay: {index * 0.2 + 0.1}s;">{responsibility}</li>
           {/each}

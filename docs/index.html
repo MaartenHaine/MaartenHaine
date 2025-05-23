@@ -1,17 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
+  <script>
+    (function () {
+      try {
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = stored || (prefersDark ? 'dark' : 'light');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maarten Haine - CV</title>
   <meta name="description" content="Personal CV website of Maarten Haine, Engineering Student specializing in Computer Science and Cybersecurity">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
     body {
       font-family: 'Inter', sans-serif;
       scroll-behavior: smooth;
+    }
+
+    /* Light mode background pattern */
+
+    body:not(.dark) {
       background-image:
               radial-gradient(circle at 25px 25px, rgba(59, 130, 246, 0.03) 2%, transparent 0%),
               radial-gradient(circle at 75px 75px, rgba(59, 130, 246, 0.03) 2%, transparent 0%);
@@ -19,85 +49,35 @@
       background-position: 0 0, 50px 50px;
     }
 
-    /* Animation for section visibility */
+    /* Dark mode background pattern */
 
-    section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Tag styling */
-
-    .tag {
-      display: inline-block;
-      padding: 0.25rem 0.75rem;
-      margin: 0.25rem;
-      border-radius: 9999px;
-      background-color: #e5e7eb;
-      color: #374151;
-      font-size: 0.875rem;
-      transition: all 0.3s ease;
-    }
-
-    .tag:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    }
-
-    .tag.language {
-      background-color: #dbeafe;
-      color: #1e40af;
-    }
-
-    .tag.programming {
-      background-color: #dcfce7;
-      color: #166534;
-    }
-
-    .tag.tool {
-      background-color: #fef3c7;
-      color: #92400e;
-    }
-
-    .tag.database {
-      background-color: #ede9fe;
-      color: #5b21b6;
-    }
-
-    .tag.devops {
-      background-color: #fee2e2;
-      color: #991b1b;
-    }
-
-    .tag.hardware {
-      background-color: #e0e7ff;
-      color: #3730a3;
-    }
-
-    .tag.ctf {
-      background-color: #fce7f3;
-      color: #9d174d;
-    }
-
-    .tag.hackathon {
-      background-color: #d1fae5;
-      color: #065f46;
-    }
-
-    .tag.coding-challenge {
-      background-color: #ffedd5;
-      color: #9a3412;
+    .dark body {
+      background-image:
+              radial-gradient(circle at 25px 25px, rgba(96, 165, 250, 0.05) 2%, transparent 0%),
+              radial-gradient(circle at 75px 75px, rgba(96, 165, 250, 0.05) 2%, transparent 0%);
+      background-size: 100px 100px;
+      background-position: 0 0, 50px 50px;
     }
   </style>
-  <script type="module" crossorigin src="./assets/index-BmV9-HB2.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-qWTRZzmx.css">
+  <script>
+    // Set theme before page loads to prevent flash
+    (function() {
+      const theme = localStorage.getItem('theme') ||
+              (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+  <script type="module" crossorigin src="./assets/index-D3UzBrIC.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Du0b6nSC.css">
 </head>
+
+
+
 <body>
 <!-- The Svelte app will be mounted here -->
 </body>
