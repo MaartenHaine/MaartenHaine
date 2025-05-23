@@ -49,11 +49,7 @@
   });
 </script>
 
-<header class={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-  isScrolled || isMenuOpen
-    ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg py-2'
-    : 'bg-transparent py-4'
-}`}>
+<header class={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${(isScrolled || isMenuOpen) ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'}`}>
   <div class="container mx-auto px-4 max-w-4xl">
     <div class="flex justify-between items-center">
       <h1 class="text-2xl font-bold text-gray-800 dark:text-white glitch-effect cursor-pointer">
@@ -105,7 +101,7 @@
             <li>
               <button
                       class={`block w-full text-left px-4 py-2 rounded-md transition-all duration-300 transform hover:scale-105 ${activeSection === item.id ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'}`}
-                      onclick={() => scrollToSection(item.id)}
+                      on:click={() => scrollToSection(item.id)}
                       style="animation-delay: {index * 0.05}s;"
               >
                 {item.label}
