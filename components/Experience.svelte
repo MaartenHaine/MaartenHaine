@@ -67,10 +67,10 @@
 
   <div class="space-y-6">
     {#each experiences as experience, index}
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover relative z-10 fade-in-up border dark:border-gray-700" style="animation-delay: {index * 0.2}s;">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover transition-all duration-300 hover:shadow-lg border dark:border-gray-700">
         <div class="flex justify-between items-start mb-4">
           <div>
-            <h3 class="text-lg font-semibold text-gray-800 dark:text-white glitch-effect">
+            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
               {experience.position}
             </h3>
             <p class="text-gray-600 dark:text-gray-300">{experience.location}</p>

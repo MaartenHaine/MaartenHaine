@@ -25,7 +25,7 @@
 <section id="education" bind:this={sectionRef}>
   <SectionTitle title="Education" />
 
-  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border dark:border-gray-700">
+  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border dark:border-gray-700 shadow-md card-hover">
     <div class="mb-4">
       <div class="flex justify-between items-start">
         <div>

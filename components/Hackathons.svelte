@@ -86,7 +86,7 @@
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     {#each hackathons as hackathon}
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg h-full flex flex-col border dark:border-gray-700">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover transition-all duration-300 hover:shadow-lg border dark:border-gray-700">
         <div class="mb-4">
           <div class="flex justify-between items-start">
             <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
