@@ -49,7 +49,11 @@
   });
 </script>
 
-<header class={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'}`}>
+<header class={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+  isScrolled || isMenuOpen
+    ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg py-2'
+    : 'bg-transparent py-4'
+}`}>
   <div class="container mx-auto px-4 max-w-4xl">
     <div class="flex justify-between items-center">
       <h1 class="text-2xl font-bold text-gray-800 dark:text-white glitch-effect cursor-pointer">
