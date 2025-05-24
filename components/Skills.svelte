@@ -96,7 +96,7 @@
 <section id="skills" bind:this={sectionRef}>
   <SectionTitle title="Skills" />
 
-  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover relative z-10 border dark:border-gray-700">
+  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover relative z-10 fade-in-up border dark:border-gray-700">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {#each skillCategories as category, categoryIndex}
         <div class="fade-in-up" style="animation-delay: {categoryIndex * 0.1}s;">

@@ -68,38 +68,38 @@
   <div class="space-y-6">
     {#each experiences as experience, index}
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover transition-all duration-300 hover:shadow-lg border dark:border-gray-700">
-        <div class="flex justify-between items-start mb-4">
-          <div>
-            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
-              {experience.position}
-            </h3>
-            <p class="text-gray-600 dark:text-gray-300">{experience.location}</p>
-          </div>
-          <div class="text-right">
-            <p class="font-medium text-gray-800 dark:text-white italic">
-              <a href={experience.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+        <a href={experience.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
+                {experience.position}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">{experience.location}</p>
+            </div>
+            <div class="text-right">
+              <p class="font-medium text-gray-800 dark:text-white italic">
                 {experience.company}
-              </a>
-            </p>
-            <p class="text-sm text-gray-600 dark:text-gray-300">{experience.period}</p>
+              </p>
+              <p class="text-sm text-gray-600 dark:text-gray-300">{experience.period}</p>
+            </div>
           </div>
-        </div>
 
-        <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300 space-y-2">
-          {#each experience.responsibilities as responsibility}
-            <li class="fade-in-up" style="animation-delay: {index * 0.2 + 0.1}s;">{responsibility}</li>
-          {/each}
-        </ul>
+          <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300 space-y-2">
+            {#each experience.responsibilities as responsibility}
+              <li class="fade-in-up" style="animation-delay: {index * 0.2 + 0.1}s;">{responsibility}</li>
+            {/each}
+          </ul>
 
-        <div class="flex flex-wrap mt-3">
-          {#each experience.skills as skill, skillIndex}
-            <Tag
-                    name={skill.name}
-                    type={skill.type}
-                    style="animation-delay: {index * 0.2 + skillIndex * 0.05}s;"
-            />
-          {/each}
-        </div>
+          <div class="flex flex-wrap mt-3">
+            {#each experience.skills as skill, skillIndex}
+              <Tag
+                      name={skill.name}
+                      type={skill.type}
+                      style="animation-delay: {index * 0.2 + skillIndex * 0.05}s;"
+              />
+            {/each}
+          </div>
+        </a>
       </div>
     {/each}
   </div>

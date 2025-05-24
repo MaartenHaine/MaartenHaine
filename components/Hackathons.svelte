@@ -87,32 +87,32 @@
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     {#each hackathons as hackathon}
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover transition-all duration-300 hover:shadow-lg border dark:border-gray-700">
-        <div class="mb-4">
-          <div class="flex justify-between items-start">
-            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
-              {#if hackathon.placement}
-                <span class="text-blue-600 dark:text-blue-400 font-bold">{hackathon.placement} — </span>
-              {/if}
-              <a href={hackathon.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
-                {hackathon.name}
-              </a>
-            </h3>
-            <span class="text-sm text-gray-600 dark:text-gray-300">{hackathon.date}</span>
+        <a href={hackathon.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+          <div class="mb-4">
+            <div class="flex justify-between items-start">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
+                {#if hackathon.placement}
+                  <span class="text-blue-600 dark:text-blue-400 font-bold">{hackathon.placement} — </span>
+                {/if}
+                  {hackathon.name}
+              </h3>
+              <span class="text-sm text-gray-600 dark:text-gray-300">{hackathon.date}</span>
+            </div>
           </div>
-        </div>
 
-        <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300 space-y-2 flex-grow">
-          {#each hackathon.description as item}
-            <li>{item}</li>
-          {/each}
-        </ul>
+          <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300 space-y-2 flex-grow">
+            {#each hackathon.description as item}
+              <li>{item}</li>
+            {/each}
+          </ul>
 
-        <div class="flex flex-wrap mt-auto pt-3">
-          <Tag name={hackathon.type === "ctf" ? "CTF" : hackathon.type === "coding-challenge" ? "Coding Challenge" : "Hackathon"} type={hackathon.type} />
-          {#each hackathon.skills as skill}
-            <Tag name={skill.name} type={skill.type} />
-          {/each}
-        </div>
+          <div class="flex flex-wrap mt-auto pt-3">
+            <Tag name={hackathon.type === "ctf" ? "CTF" : hackathon.type === "coding-challenge" ? "Coding Challenge" : "Hackathon"} type={hackathon.type} />
+            {#each hackathon.skills as skill}
+              <Tag name={skill.name} type={skill.type} />
+            {/each}
+          </div>
+        </a>
       </div>
     {/each}
   </div>

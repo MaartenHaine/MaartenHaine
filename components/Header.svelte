@@ -53,7 +53,9 @@
   <div class="container mx-auto px-4 max-w-4xl">
     <div class="flex justify-between items-center">
       <h1 class="text-2xl font-bold text-gray-800 dark:text-white glitch-effect cursor-pointer">
-        <span class="font-mono">&lt;</span>Maarten<span class="text-blue-600 dark:text-blue-400">/</span><span class="font-mono">&gt;</span>
+        <button on:click={() => scrollToSection('about')}>
+          <span class="font-mono">&lt;</span>Maarten<span class="text-blue-600 dark:text-blue-400">/</span><span class="font-mono">&gt;</span>
+        </button>
       </h1>
 
       <div class="flex items-center space-x-4">

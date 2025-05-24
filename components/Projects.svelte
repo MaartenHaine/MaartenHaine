@@ -91,6 +91,7 @@
     },
     {
       name: "Transportation System",
+      url: "https://github.com/MaartenHaine/Transportationsystem",
       organization: "PnO Project KU Leuven",
       year: "2022",
       description: [
@@ -130,37 +131,37 @@
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     {#each projects as project, index}
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover transition-all duration-300 hover:shadow-lg border dark:border-gray-700">
-        <div class="mb-4">
-          <div class="flex justify-between items-start">
-            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
-              {#if project.url}
-                <a href={project.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+        <a href={project.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+          <div class="mb-4">
+            <div class="flex justify-between items-start">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
+                {#if project.url}
+                    {project.name}
+                {:else}
                   {project.name}
-                </a>
-              {:else}
-                {project.name}
-              {/if}
-            </h3>
-            <span class="text-sm text-gray-600 dark:text-gray-300 font-mono bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">{project.year}</span>
+                {/if}
+              </h3>
+              <span class="text-sm text-gray-600 dark:text-gray-300 font-mono bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">{project.year}</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">{project.organization}</p>
           </div>
-          <p class="text-gray-600 dark:text-gray-300 text-sm">{project.organization}</p>
-        </div>
 
-        <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300 space-y-2 flex-grow">
-          {#each project.description as item}
-            <li>{item}</li>
-          {/each}
-        </ul>
+          <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300 space-y-2 flex-grow">
+            {#each project.description as item}
+              <li>{item}</li>
+            {/each}
+          </ul>
 
-        <div class="flex flex-wrap mt-auto pt-3">
-          {#each project.skills as skill, skillIndex}
-            <Tag
-                    name={skill.name}
-                    type={skill.type}
-                    style="animation-delay: {index * 0.1 + skillIndex * 0.02}s;"
-            />
-          {/each}
-        </div>
+          <div class="flex flex-wrap mt-auto pt-3">
+            {#each project.skills as skill, skillIndex}
+              <Tag
+                      name={skill.name}
+                      type={skill.type}
+                      style="animation-delay: {index * 0.1 + skillIndex * 0.02}s;"
+              />
+            {/each}
+          </div>
+        </a>
       </div>
     {/each}
   </div>
