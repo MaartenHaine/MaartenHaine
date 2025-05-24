@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b367103-ed9d-4027-b9be-eb970d75d29e" name="Changes" comment="build changes">
+    <list default="true" id="1b367103-ed9d-4027-b9be-eb970d75d29e" name="Changes" comment="Clicking container with pop up and linking to relevant site">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Education.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Education.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Experience.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Experience.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Extracurricular.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Extracurricular.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hackathons.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hackathons.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/App.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Projects.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Projects.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Skills.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Skills.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +91,8 @@
       <workItem from="1748028801852" duration="2217000" />
       <workItem from="1748032964541" duration="644000" />
       <workItem from="1748119043627" duration="2333000" />
-      <workItem from="1748121562277" duration="612000" />
+      <workItem from="1748121562277" duration="1499000" />
+      <workItem from="1748125465312" duration="1605000" />
     </task>
     <task id="LOCAL-00001" summary="add wave animation">
       <option name="closed" value="true" />
@@ -199,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748033005773</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Clicking container with pop up and linking to relevant site">
+      <option name="closed" value="true" />
+      <created>1748122250994</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1748122250994</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +223,7 @@
     <MESSAGE value="Added extra animations on hovering containers, removed glitch effect for clarity" />
     <MESSAGE value="changed location of skills" />
     <MESSAGE value="build changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="build changes" />
+    <MESSAGE value="Clicking container with pop up and linking to relevant site" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clicking container with pop up and linking to relevant site" />
   </component>
 </project>

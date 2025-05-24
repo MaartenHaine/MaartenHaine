@@ -18,7 +18,6 @@
     {
       title: "Soft Skils",
       skills: [
-        { name: "Teamwork", type: "soft-skill" },
         { name: "Leadership", type: "soft-skill" },
         { name: "Event Management", type: "soft-skill" }
       ]
@@ -30,11 +29,7 @@
         { name: "RISC-V", type: "programming" },
         { name: "Java", type: "programming" },
         { name: "PHP", type: "programming" },
-        { name: "Bash", type: "programming" },
-        { name: "C", type: "programming" },
-        { name: "C++", type: "programming" },
-        { name: "JavaScript", type: "programming" },
-        { name: "TypeScript", type: "programming" }
+        { name: "C", type: "programming" }
       ]
     },
     {
@@ -42,25 +37,15 @@
       skills: [
         { name: "WPA/WEP cracking", type: "security" },
         { name: "Web Exploitation", type: "security" },
-        { name: "Cryptography", type: "security" },
         { name: "Network Security", type: "security" }
       ]
     },
     {
       title: "Development & Tools",
       skills: [
-        { name: "REST API design", type: "tool" },
+        { name: "REST API", type: "tool" },
         { name: "Database integration", type: "tool" },
-        { name: "Flask", type: "tool" },
-        { name: "Node.js", type: "tool" },
-        { name: "React", type: "tool" },
-        { name: "Symfony", type: "tool" },
-        { name: "Docker", type: "tool" },
-        { name: "GitHub Actions", type: "tool" },
-        { name: "MySQL", type: "database" },
-        { name: "Jira", type: "devops" },
-        { name: "Linux server management", type: "devops" },
-        { name: "CI/CD", type: "devops" },
+        { name: "Linux", type: "tool" },
         { name: "Git", type: "devops" }
       ]
     },

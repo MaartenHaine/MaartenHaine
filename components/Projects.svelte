@@ -18,9 +18,9 @@
       skills: [
         { name: "Python", type: "programming" },
         { name: "REST API", type: "tool" },
+        { name: "OOP", type: "tool" },
         { name: "GitHub Actions", type: "tool" },
-        { name: "Testing", type: "tool" },
-        { name: "Documentation", type: "soft-skill" }
+        { name: "Testing", type: "tool" }
       ]
     },
     {
@@ -36,6 +36,7 @@
       skills: [
         { name: "PHP", type: "programming" },
         { name: "Symfony", type: "tool" },
+        { name: "Docker", type: "tool" },
         { name: "MySQL", type: "database" },
         { name: "JavaScript", type: "programming" },
         { name: "TypeScript", type: "programming" },
@@ -54,8 +55,7 @@
       skills: [
         { name: "PHP", type: "programming" },
         { name: "MySQL", type: "database" },
-        { name: "Backend Development", type: "tool" },
-        { name: "Technical Support", type: "soft-skill" }
+        { name: "Docker", type: "tool" }
       ]
     },
     {
@@ -100,9 +100,7 @@
       ],
       skills: [
         { name: "Arduino", type: "hardware" },
-        { name: "Sensors", type: "hardware" },
-        { name: "Mobile App Development", type: "tool" },
-        { name: "MIT App Inventor", type: "tool" }
+        { name: "Sensors", type: "hardware" }
       ]
     }
   ];

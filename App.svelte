@@ -39,7 +39,7 @@
       if (newActiveSection !== activeSection) {
         activeSection = newActiveSection;
       }
-    }, 100); // 100ms debounce
+    }, 100);
   }
 </script>
 
