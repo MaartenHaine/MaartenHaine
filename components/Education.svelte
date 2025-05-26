@@ -24,9 +24,8 @@
 
 <section id="education" bind:this={sectionRef}>
   <SectionTitle title="Education" />
-
-  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border dark:border-gray-700 shadow-md card-hover">
-    <a href={'https://wms.cs.kuleuven.be/cs/english'} target="_blank">
+  <a href={'https://wms.cs.kuleuven.be/cs/english'} target="_blank">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border dark:border-gray-700 shadow-md card-hover">
       <div class="mb-4">
         <div class="flex justify-between items-start">
           <div>
@@ -53,6 +52,6 @@
           </div>
         </div>
       </div>
-    </a>
-  </div>
+    </div>
+  </a>
 </section>
