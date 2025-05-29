@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b367103-ed9d-4027-b9be-eb970d75d29e" name="Changes" comment="changed skills to primary skills I want to work with.">
+    <list default="true" id="1b367103-ed9d-4027-b9be-eb970d75d29e" name="Changes" comment="Fixed referal link on container instead of text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Education.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Education.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Experience.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Experience.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Extracurricular.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Extracurricular.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hackathons.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hackathons.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Projects.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/components/Projects.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +92,8 @@
       <workItem from="1748125465312" duration="1672000" />
       <workItem from="1748196340181" duration="20000" />
       <workItem from="1748267544150" duration="246000" />
-      <workItem from="1748267965001" duration="209000" />
+      <workItem from="1748267965001" duration="873000" />
+      <workItem from="1748525901673" duration="532000" />
     </task>
     <task id="LOCAL-00001" summary="add wave animation">
       <option name="closed" value="true" />
@@ -217,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748127128509</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fixed referal link on container instead of text">
+      <option name="closed" value="true" />
+      <created>1748268230948</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1748268230948</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +242,7 @@
     <MESSAGE value="build changes" />
     <MESSAGE value="Clicking container with pop up and linking to relevant site" />
     <MESSAGE value="changed skills to primary skills I want to work with." />
-    <option name="LAST_COMMIT_MESSAGE" value="changed skills to primary skills I want to work with." />
+    <MESSAGE value="Fixed referal link on container instead of text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed referal link on container instead of text" />
   </component>
 </project>

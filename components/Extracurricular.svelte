@@ -76,37 +76,39 @@
 
   <div class="space-y-6">
     {#each activities as activity}
-      <a href={activity.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover transition-all duration-300 hover:shadow-lg border dark:border-gray-700">
-          <div class="flex justify-between items-start mb-4">
-            <div>
-              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
-                {activity.position}
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300">{activity.location}</p>
-            </div>
-            <div class="text-right">
-              <p class="font-medium text-gray-800 dark:text-white italic">
-                {activity.organization}
+      <div class="mb-6">
+        <a href={activity.url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover transition-all duration-300 hover:shadow-lg border dark:border-gray-700">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
+                  {activity.position}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">{activity.location}</p>
+              </div>
+              <div class="text-right">
+                <p class="font-medium text-gray-800 dark:text-white italic">
+                  {activity.organization}
 
-              </p>
-              <p class="text-sm text-gray-600 dark:text-gray-300">{activity.period}</p>
+                </p>
+                <p class="text-sm text-gray-600 dark:text-gray-300">{activity.period}</p>
+              </div>
+            </div>
+
+            <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300 space-y-2">
+              {#each activity.responsibilities as responsibility}
+                <li>{responsibility}</li>
+              {/each}
+            </ul>
+
+            <div class="flex flex-wrap mt-3">
+              {#each activity.skills as skill}
+                <Tag name={skill.name} type={skill.type} />
+              {/each}
             </div>
           </div>
-
-          <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300 space-y-2">
-            {#each activity.responsibilities as responsibility}
-              <li>{responsibility}</li>
-            {/each}
-          </ul>
-
-          <div class="flex flex-wrap mt-3">
-            {#each activity.skills as skill}
-              <Tag name={skill.name} type={skill.type} />
-            {/each}
-          </div>
-        </div>
-      </a>
+        </a>
+      </div>
     {/each}
   </div>
 </section>
