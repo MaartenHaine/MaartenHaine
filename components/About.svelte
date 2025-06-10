@@ -52,8 +52,11 @@
       />
     </div>
 
-    <div class="flex justify-center items-center space-x-4 mb-4 fade-in-up" style="animation-delay: 3.7s;">
-      <a href="mailto:maarten.haine@protonmail.com" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-all duration-300 flex items-center transform hover:scale-105">
+
+    <div class="flex justify-center items-center space-x-4 fade-in-up" style="animation-delay: 3.7s;">
+      <span class="text-gray-600 dark:text-gray-300">Leuven, Belgium</span>
+      <span class="text-gray-400 dark:text-gray-500">•</span>
+       <a href="mailto:maarten.haine@protonmail.com" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-all duration-300 flex items-center transform hover:scale-105">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
           <polyline points="22,6 12,13 2,6"></polyline>
@@ -62,13 +65,7 @@
       </a>
     </div>
 
-    <div class="flex justify-center items-center space-x-4 fade-in-up" style="animation-delay: 4.2s;">
-      <span class="text-gray-600 dark:text-gray-300">Leuven, Belgium</span>
-      <span class="text-gray-400 dark:text-gray-500">•</span>
-      <span class="text-gray-600 dark:text-gray-300">+32 468 46 90 46</span>
-    </div>
-
-    <div class="flex justify-center items-center space-x-4 mt-6 fade-in-up" style="animation-delay: 4.7s;">
+    <div class="flex justify-center items-center space-x-4 mt-6 fade-in-up" style="animation-delay: 4.2s;">
       <a href="https://www.linkedin.com/in/maartenhaine/" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-all duration-300 transform hover:scale-110 hover:rotate-12" aria-label="LinkedIn">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
           <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
