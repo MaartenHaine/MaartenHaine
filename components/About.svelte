@@ -56,12 +56,12 @@
     <div class="flex justify-center items-center space-x-4 fade-in-up" style="animation-delay: 3.7s;">
       <span class="text-gray-600 dark:text-gray-300">Leuven, Belgium</span>
       <span class="text-gray-400 dark:text-gray-500">•</span>
-       <a href="mailto:maarten.haine@protonmail.com" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-all duration-300 flex items-center transform hover:scale-105">
+       <a href="mailto:maartenhaine12@protonmail.com" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-all duration-300 flex items-center transform hover:scale-105">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
           <polyline points="22,6 12,13 2,6"></polyline>
         </svg>
-        maarten.haine@protonmail.com
+        maartenhaine12@protonmail.com
       </a>
     </div>
 
